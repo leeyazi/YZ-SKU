@@ -109,7 +109,7 @@ function labelCanvas(p) {
   x.fillStyle = "#fff"; x.fillRect(0, 0, W, H); x.fillStyle = "#000";
   for (let r = 0; r < n; r++) for (let k = 0; k < n; k++) if (q.isDark(r, k)) x.fillRect(pad + k * cell, pad + r * cell, cell, cell);
   x.textAlign = "center"; x.font = "bold 34px ui-monospace, Menlo, monospace"; x.fillText(p.sku, W / 2, qs + pad + 50);
-  x.font = "24px Inter, sans-serif"; let name = p.name || ""; while (x.measureText(name).width > W - 40 && name.length > 3) name = name.slice(0, -2);
+  x.font = "600 24px Figtree, sans-serif"; let name = p.name || ""; while (x.measureText(name).width > W - 40 && name.length > 3) name = name.slice(0, -2);
   if (name !== (p.name || "")) name += "…"; x.fillStyle = "#333"; x.fillText(name, W / 2, qs + pad + 88);
   return c;
 }
